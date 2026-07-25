@@ -89,7 +89,7 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: https://graph.microsoft.com/beta/applications/c642e789-57df-465d-8407-aea848cc4057/addPassword
+  - url: https://graph.microsoft.com/beta/applications/<AGENT_BLUEPRINT_OBJECT_ID>/addPassword
     name: Add Password credential (client secret) to the Agent Blueprint
     meta:
       id: req_34dec8dcb4d84c5aa8d3f38806d43d4f
@@ -337,37 +337,6 @@ collection:
         send: true
         store: true
       rebuildPath: true
-cookieJar:
-  name: Default Jar
-  meta:
-    id: jar_cbec0cc8feb3402fbcd2aa5283a89b5c
-    created: 1773342604319
-    modified: 1773434296546
-  cookies:
-    - id: 4f09c701-efc0-4421-992c-a642e06c1c24
-      key: fpc
-      value: Ahf1c03AJX5Nnnw2O2K3O0zzK58hAQAAAH9sRuEOAAAA
-      domain: login.microsoftonline.com
-      path: /
-      secure: true
-      httpOnly: true
-      hostOnly: true
-    - id: 94a49204-101f-40ab-aeda-bd64a3420fc0
-      key: x-ms-gateway-slice
-      value: estsfd
-      domain: login.microsoftonline.com
-      path: /
-      secure: true
-      httpOnly: true
-      hostOnly: true
-    - id: 8fd29be9-851a-47fe-b138-27e0eac3eeab
-      key: stsservicecookie
-      value: estsfd
-      domain: login.microsoftonline.com
-      path: /
-      secure: true
-      httpOnly: true
-      hostOnly: true
 environments:
   name: Base Environment
   meta:

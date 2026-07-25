@@ -39,7 +39,7 @@ This repository demonstrates the following activities related to **Microsoft Ent
 4. agent_blueprint_appId - Copy the App ID result from 01.01
 5. client_secret - Copy the output "Secret Text" from 01.03
 6. Agentaccess_token - Copy the result from 01.04
-7. agent_user_upn - Create a User UPN with Text@tenantaddress. Example vij@M5633647.onmicrosoft.com
+7. agent_user_upn - Create a User UPN with Text@tenantaddress. Example user@example.onmicrosoft.com
 8. agent_user_mailNickName - You can create a Nickname for the Agent User Mail ID. Example vijAgent
 9. GENERATED_GUID - randomly create a GUID from the internet
 10. agent_identity_clientId - Execute 02.01 -> Entra Admin Center -> Agent ID (Preview) -> Click the Agent ID just created and copy the Client ID
@@ -81,12 +81,12 @@ Expected result
 {
 	"@odata.context": "https://graph.microsoft.com/beta/$metadata#applications/$entity",
 	"@odata.type": "#microsoft.graph.agentIdentityBlueprint",
-	"id": "70b20c91-fe87-46e7-8c92-24e65a0e199c",
+	"id": "<AGENT_BLUEPRINT_APP_ID>",
 	"deletedDateTime": null,
-	"appId": "70b20c91-fe87-46e7-8c92-24e65a0e199c",
+	"appId": "<AGENT_BLUEPRINT_APP_ID>",
 	"applicationTemplateId": null,
 	"identifierUris": [],
-	"createdByAppId": "de8bc8b5-d9f9-48b1-a8ad-b748da725064",
+	"createdByAppId": "<CREATED_BY_APP_ID>",
 	"createdDateTime": "2026-03-12T20:37:33.8446502Z",
 	"description": null,
 	"disabledByMicrosoftStatus": null,
@@ -101,7 +101,7 @@ Expected result
 	"notes": null,
 	"oauth2RequirePostResponse": false,
 	"orgRestrictions": [],
-	"publisherDomain": "M365t09313528.onmicrosoft.com",
+	"publisherDomain": "<PUBLISHER_DOMAIN>",
 	"signInAudience": "AzureADMyOrg",
 	"tags": [],
 }
@@ -125,11 +125,11 @@ Expected result
 {
 	"error": {
 		"code": "Request_MultipleObjectsWithSameKeyValue",
-		"message": "The service principal cannot be created, updated, or restored because the service principal name c642e789-57df-465d-8407-aea848cc4057 is already in use.",
+		"message": "The service principal cannot be created, updated, or restored because the service principal name <AGENT_BLUEPRINT_OBJECT_ID> is already in use.",
 		"details": [
 			{
 				"code": "ObjectConflict",
-				"message": "The service principal cannot be created, updated, or restored because the service principal name c642e789-57df-465d-8407-aea848cc4057 is already in use.",
+				"message": "The service principal cannot be created, updated, or restored because the service principal name <AGENT_BLUEPRINT_OBJECT_ID> is already in use.",
 				"target": "None",
 				"blockedWord": "",
 				"prefix": "",
@@ -138,8 +138,8 @@ Expected result
 		],
 		"innerError": {
 			"date": "2026-03-12T23:50:07",
-			"request-id": "20879765-24ec-45ea-b420-e9e35cf61a50",
-			"client-request-id": "20879765-24ec-45ea-b420-e9e35cf61a50"
+			"request-id": "<REQUEST_ID>",
+			"client-request-id": "<REQUEST_ID>"
 		}
 	}
 }
@@ -165,10 +165,10 @@ Expected Respone
 	"@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.passwordCredential",
 	"customKeyIdentifier": null,
 	"endDateTime": "2026-08-05T23:59:59Z",
-	"keyId": "b9700ba4-663a-45af-81ab-963167973e1c",
+	"keyId": "<KEY_ID>",
 	"startDateTime": "2026-03-12T23:17:19.5583321Z",
-	"secretText": "Qr***",
-	"hint": "Qr0",
+	"secretText": "<CLIENT_SECRET>",
+	"hint": "<SECRET_HINT>",
 	"displayName": "Dummy Secret"
 }
 ```
@@ -243,16 +243,16 @@ Expected Response
 ```json
 {
 	"@odata.context": "https://graph.microsoft.com/beta/$metadata#servicePrincipals/microsoft.graph.agentIdentity/$entity",
-	"id": "6266698c-faf8-4806-a251-ec250a1ff466",
+	"id": "<AGENT_IDENTITY_APP_ID>",
 	"deletedDateTime": null,
 	"accountEnabled": true,
 	"alternativeNames": [],
-	"createdByAppId": "c642e789-57df-465d-8407-aea848cc4057",
+	"createdByAppId": "<AGENT_BLUEPRINT_OBJECT_ID>",
 	"createdDateTime": null,
 	"deviceManagementAppType": null,
 	"appDescription": null,
 	"appDisplayName": null,
-	"appId": "6266698c-faf8-4806-a251-ec250a1ff466",
+	"appId": "<AGENT_IDENTITY_APP_ID>",
 	"applicationTemplateId": null,
 	"appOwnerOrganizationId": null,
 	"appRoleAssignmentRequired": false,

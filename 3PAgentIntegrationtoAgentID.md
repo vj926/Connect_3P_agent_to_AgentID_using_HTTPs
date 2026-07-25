@@ -105,8 +105,8 @@ In this step, we **connect Base44 with Microsoft Entra** by writing a backend fu
 Created a backend function `getEntraData` in Base44:
 
 ```typescript
-const TENANT_ID = "98430660-2a7e-4e6b-b49c-800a8ba8b657";
-const AGENT_IDENTITY_APP_ID = "5d3b28ae-7458-4184-a76b-bbe3a6c48a96";
+const TENANT_ID = "<TENANT_ID>";
+const AGENT_IDENTITY_APP_ID = "<AGENT_IDENTITY_APP_ID>";
 
 async function exchangeFicTokenForAccessToken(ficToken) {
   const tokenEndpoint =
@@ -191,10 +191,10 @@ export default async function handler(req) {
   "success": true,
   "message": "Base44 Agent successfully authenticated as Entra Agent Identity",
   "agentIdentity": {
-    "appId": "5d3b28ae-7458-4184-a76b-bbe3a6c48a96",
-    "subject": "5d3b28ae-7458-4184-a76b-bbe3a6c48a96",
-    "issuer": "https://login.microsoftonline.com/98430660-.../v2.0",
-    "tenantId": "98430660-2a7e-4e6b-b49c-800a8ba8b657",
+    "appId": "<AGENT_IDENTITY_APP_ID>",
+    "subject": "<AGENT_IDENTITY_APP_ID>",
+    "issuer": "https://login.microsoftonline.com/<TENANT_ID>/v2.0",
+    "tenantId": "<TENANT_ID>",
     "tokenType": "app",
     "expiresAt": "2026-03-26T08:48:36.000Z"
   }
